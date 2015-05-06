@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="oauth-login-app">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1394172768251</CreatedAt>
+    <CreatedBy>sean.williams@accenture.com</CreatedBy>
+    <Description>null</Description>
+    <DisplayName>OAuth20</DisplayName>
+    <LastModifiedAt>1423621193276</LastModifiedAt>
+    <LastModifiedBy>sean.williams@accenture.com</LastModifiedBy>
+    <Policies>
+        <Policy>DeleteForwardedHeaders</Policy>
+        <Policy>DeleteStateParam</Policy>
+        <Policy>GenerateAccessToken</Policy>
+        <Policy>GenerateAuthorizationCode</Policy>
+        <Policy>Get-OAuth-v20-Info-1</Policy>
+        <Policy>GetStateParam</Policy>
+        <Policy>GetStateQueryParam</Policy>
+        <Policy>JS_EncodeStateQueryParam</Policy>
+        <Policy>RedirectToLoginApp</Policy>
+        <Policy>Refresh-Access-Token</Policy>
+        <Policy>sample.loginpage.implicitflow</Policy>
+        <Policy>sample.loginpage.webserverflow</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://encode_state_query_param.js</Resource>
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

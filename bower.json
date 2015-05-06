@@ -1,0 +1,22 @@
+{
+  "name": "apigee-linter",
+  "version": "0.0.0",
+  "moduleType": [
+    "node"
+  ],
+  "authors": [
+    "Sean Williams"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "xmldom": "~0.1.16",
+    "xpath": "0.0.9"
+  }
+}

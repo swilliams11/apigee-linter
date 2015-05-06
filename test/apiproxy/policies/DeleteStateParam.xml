@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="DeleteStateParam">
+    <DisplayName>DeleteStateParam</DisplayName>
+    <FaultRules/>
+    <Properties/>    
+    <Remove>       
+        <QueryParams>
+            <QueryParam name="state"></QueryParam>
+        </QueryParams>       
+    </Remove>   
+  	 <Set>
+    <QueryParams>
+      <QueryParam name="state">{stateparam}</QueryParam>
+    </QueryParams>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

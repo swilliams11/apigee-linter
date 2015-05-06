@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="GetStateParam">
+    <DisplayName>GetStateParam</DisplayName>
+    <FaultRules/>
+    <Properties/>
+   
+    <AssignVariable>
+        <Name>stateparam</Name>
+        <Value/>
+      <Ref>request.queryparam.state</Ref>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

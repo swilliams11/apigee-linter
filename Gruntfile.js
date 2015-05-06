@@ -34,16 +34,7 @@ module.exports = function(grunt) {
         options: {
         },
         files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
-      },
-      custom_options: {
-        options: {
-          separator: ': ',
-          punctuation: ' !!!'
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
+          'src': ['test/apiproxy/policies/*.xml']
         }
       }
     },
@@ -51,6 +42,7 @@ module.exports = function(grunt) {
     // Unit tests.
     nodeunit: {
       tests: ['test/*_test.js']
+      
     }
 
   });
@@ -68,6 +60,7 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['clean', 'apigee_linter', 'nodeunit']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'test']);
+  grunt.registerTask('default', ['jshint','test']);
+  grunt.registerTask('apigee-lint', ['jshint','apigee_linter']);
 
 };

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 name="GenerateAccessToken">
+    <FaultRules/>
+    <Properties/>
+    <!--<ExpiresIn>3600000</ExpiresIn> -->
+  <ExpiresIn>120000</ExpiresIn> 
+    <SupportedGrantTypes>
+        <GrantType>authorization_code</GrantType>
+        <!--<GrantType>refresh_token</GrantType>-->
+        <!--<GrantType>implicit</GrantType>
+        <GrantType>client_credentials</GrantType>-->
+    </SupportedGrantTypes>
+    <RefreshToken>request.formparam.refresh_token</RefreshToken>
+    <ClientId>request.formparam.client_id</ClientId>
+    <!--<Secret>request.formparam.client_id</Secret>-->
+  
+    <GenerateResponse/>
+</OAuthV2>
+

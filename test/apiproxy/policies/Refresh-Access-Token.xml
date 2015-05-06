@@ -1,0 +1,9 @@
+<OAuthV2 name="Refresh-Access-Token">
+    <Operation>RefreshAccessToken</Operation>
+    <!-- This is in millseconds, so expire in half an hour -->
+    <ExpiresIn>1800000</ExpiresIn>
+  	<RefreshTokenExpiresIn>120000</RefreshTokenExpiresIn>
+    <GrantType>request.formparam.grant_type</GrantType> 
+  <RefreshToken>request.formparam.refresh_token</RefreshToken>
+    <GenerateResponse/>
+</OAuthV2>
