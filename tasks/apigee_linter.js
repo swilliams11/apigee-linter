@@ -21,10 +21,6 @@ module.exports = function(grunt) {
     // creation: http://gruntjs.com/creating-tasks
     grunt.registerMultiTask('apigee_linter', 'Apigee linter', function() {
         // Lint specified files.
-        apigee.assignMessage();
-        // Write the destination file.
-        //grunt.file.write(f.dest, src);
-        // Print a success message.
-        //grunt.log.writeln('File "' + f.dest + '" created.');
+        apigee.assignMessage(grunt.task.current.filesSrc);
     });    
 };

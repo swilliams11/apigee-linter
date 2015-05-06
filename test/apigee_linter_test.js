@@ -30,7 +30,7 @@ exports.apigee_linter = {
     default_options: function(test) {
         test.expect(1);
         //grunt.task.run('apigee_linter');
-        var count = apigee.assignMessage();
+        var count = apigee.assignMessage(grunt.file.expand('test/apiproxy/policies/*.xml'));
         //console.log(grunt.config.get('nodeunit.files.src'));
         
         test.equal(count, 3, 'Number of AssignMessage policies found.');

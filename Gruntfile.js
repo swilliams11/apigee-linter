@@ -32,6 +32,12 @@ module.exports = function(grunt) {
     apigee_linter: {
       default_options: {
         options: {
+          assign_message: {
+            assign_message: {
+              name: /-+/,
+              name_starts_with: /Assign-Message.*/,
+            }
+          }
         },
         files: {
           'src': ['test/apiproxy/policies/*.xml']
