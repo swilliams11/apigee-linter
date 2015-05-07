@@ -7,6 +7,7 @@
  */
 'use strict';
 var apigee = require('../lib/lib.js');
+//var apigee = require('../lib/oauth.js');
 module.exports = function(grunt) {
     /*
     var xpath = require('xpath'),
@@ -19,8 +20,8 @@ module.exports = function(grunt) {
     */
     // Please see the Grunt documentation for more information regarding task
     // creation: http://gruntjs.com/creating-tasks
-    grunt.registerMultiTask('apigee_linter', 'Apigee linter', function() {
+    grunt.registerMultiTask('apigee_assign_message', 'Apigee Assign Message linter', function() {
         // Lint specified files.
         apigee.assignMessage(grunt.task.current.filesSrc);
-    });    
+    });       
 };
