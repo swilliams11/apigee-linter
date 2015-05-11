@@ -62,9 +62,64 @@ module.exports = function(grunt) {
             lint: {
                 options: {
                     extract_variables: {
-                        name: 'dash',
+                        format: 'dash',
                         name_starts_with: /Extract-Variables.*/,
                     },
+                    //this should be uri_pattern instead
+                    pattern: {
+                        format: 'dash',
+                        text_xpath:'/ExtractVariables/QueryParam/Pattern/text()',
+                        pattern_xpath:'/ExtractVariables/QueryParam/Pattern'
+                    },
+                    uri_pattern: {
+                        format: 'dash',
+                        text_xpath:'/ExtractVariables/URI/Pattern/text()',
+                        pattern_xpath:'/ExtractVariables/URI/Pattern'
+                    },
+                    header_pattern: {
+                        format: 'dash',
+                        text_xpath:'/ExtractVariables/Header/Pattern/text()',
+                        pattern_xpath:'/ExtractVariables/Header/Pattern'
+                    },
+                    form_param_pattern: {
+                        format: 'dash',
+                        text_xpath:'/ExtractVariables/FormParam/Pattern/text()',
+                        pattern_xpath:'/ExtractVariables/FormParam/Pattern'
+                    },
+                    variable: {
+                        format: 'dash',
+                        name_xpath: '/ExtractVariables/Variable/@name',
+                        pattern_xpath: '/ExtractVariables/Variable'
+                    },
+                    variable_pattern: {
+                      format: 'dash',
+                      text_xpath : '/ExtractVariables/Variable/Pattern/text()',
+                      pattern_xpath :'/ExtractVariables/Variable/Pattern'    
+                    },
+                    json_payload_variable: {
+                      format: 'dash',
+                      name_xpath : '/ExtractVariables/JSONPayload/Variable/@name',
+                      pattern_xpath: '/ExtractVariables/JSONPayload/Variable'
+                    },
+                    xml_payload_variable: {
+                      format: 'dash',
+                      name_xpath : '/ExtractVariables/XMLPayload/Variable/@name',
+                      pattern_xpath: '/ExtractVariables/XMLPayload/Variable'
+                    }
+                },
+                files: {
+                    'src': ['test/apiproxy/policies/*.xml']
+                }
+            }
+        },
+        //configuration for GetOauthV2Info policy
+        get_oauth_v2_info: {
+            lint: {
+                options: {
+                    name: {
+                        format: 'dash',
+                        name_starts_with: /Get-OAuth-V2-Info.*/,
+                    }
                 },
                 files: {
                     'src': ['test/apiproxy/policies/*.xml']

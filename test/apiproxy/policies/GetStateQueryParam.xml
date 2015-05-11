@@ -5,6 +5,47 @@
     <Properties/>   
     <QueryParam name="state">
       <Pattern ignoreCase="true">{stateparam}</Pattern>
+	  <Pattern ignoreCase="true">{testParam}</Pattern>
   </QueryParam>
+    <URIPath name="state">
+      <Pattern ignoreCase="true">/{uria}</Pattern>
+	  <Pattern ignoreCase="true">/a/{MyUri}/b</Pattern>
+	  <Pattern ignoreCase="true">/{PatientObservationResource}/{MyUri}/b</Pattern>
+  </URIPath>
+  <Header name="x-Header">
+      <Pattern ignoreCase="true">{myheader}</Pattern>
+	  <Pattern ignoreCase="true">{MyHeader}</Pattern>
+	  <Pattern ignoreCase="true">Bearer {PatientHeader}</Pattern>
+  </Header>
+  <FormParam name="Name">
+      <Pattern ignoreCase="true">hello {myparam}</Pattern>
+	  <Pattern ignoreCase="true">hello {MyParam}</Pattern>
+	  <Pattern ignoreCase="true">{MyCustomParam}</Pattern>
+  </FormParam>
+  <Variable name="Name">
+      <Pattern ignoreCase="true">hello {myparam}</Pattern>	  
+  </Variable>
+  <Variable name="MyVariable2">
+	<Pattern ignoreCase="true">hello {MyVar2}</Pattern>
+  </Variable>
+  <Variable name="MyCustomVariable">
+	  <Pattern ignoreCase="true">{MyCustomVar}</Pattern>
+  </Variable>
+  <JSONPayload>
+  	<Variable name="jsonVariable">
+   		<JSONPath>$.rss.channel.title</JSONPath>
+	</Variable>
+	<Variable name="jsonVariable2">
+   		<JSONPath>$.rss.channel.author</JSONPath>
+	</Variable>
+</JSONPayload>
+<XMLPayload>
+  	<Variable name="xpathVariable">
+   		 <XPath>/apigee:test/apigee:example</XPath>
+	</Variable>
+	<Variable name="xpathVariable2">
+   		 <XPath>/apigee:test/apigee:example</XPath>
+	</Variable>
+</XMLPayload>
     <Source clearPayload="false">request</Source>    
 </ExtractVariables>
