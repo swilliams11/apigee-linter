@@ -118,7 +118,8 @@ module.exports = function(grunt) {
                 options: {
                     name: {
                         format: 'dash',
-                        name_starts_with: /Get-OAuth-V2-Info.*/,
+                        name_starts_with: /Get-OAuth-V20-Info.*/i,
+                        name_xpath: '/GetOAuthV2Info/@name',
                     }
                 },
                 files: {
