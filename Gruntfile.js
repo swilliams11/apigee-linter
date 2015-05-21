@@ -116,6 +116,7 @@ module.exports = function(grunt) {
         get_oauth_v2_info: {
             lint: {
                 options: {
+                    search_for: '<GetOAuthV2Info',
                     name: {
                         format: 'dash',
                         name_starts_with: /Get-OAuth-V20-Info.*/i,
